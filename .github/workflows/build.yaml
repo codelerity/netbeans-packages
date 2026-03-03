@@ -90,7 +90,7 @@ jobs:
         run: java Exec.java build linux x64 deb
       - name: Upload to workflow
         if: ${{ ! inputs.release-tag }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: linux-deb-x64
           path: |
@@ -133,7 +133,7 @@ jobs:
         run: java Exec.java build linux arm deb
       - name: Upload to workflow
         if: ${{ ! inputs.release-tag }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: linux-deb-aarch64
           path: |
@@ -178,7 +178,7 @@ jobs:
         run: java Exec.java build linux x64 rpm
       - name: Upload to workflow
         if: ${{ ! inputs.release-tag }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: linux-rpm-x64
           path: |
@@ -246,7 +246,7 @@ jobs:
           echo "Updated hash : " $(cat ${EXE}.sha256)
       - name: Upload to workflow
         if: ${{ ! inputs.release-tag }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: windows-exe-x64
           path: |
@@ -317,7 +317,7 @@ jobs:
         run: java Exec.java build macos arm pkg
       - name: Upload to workflow
         if: ${{ ! inputs.release-tag }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: macos-pkg-aarch64
           path: |
@@ -387,7 +387,7 @@ jobs:
         run: java Exec.java build macos x64 pkg
       - name: Upload to workflow
         if: ${{ ! inputs.release-tag }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: macos-pkg-x64
           path: |
